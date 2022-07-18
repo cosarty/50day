@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+
+body{
+  margin: 0;
+  background-color: #333;
+  color: #222;
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+}
+.container{
+  
+  background-color: #fafafa;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.container.show-nav{
+  transform: rotate(-15deg);
+
+}
+
+.circle{
+  background-color: #ff7979;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  position: relative;
+  transition: transform .5s ease;
+  cursor: pointer;
+
+}
+
+.circle button{
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  top:50%;
+  left:50%;
+  color: white;
+  font-size: 26px;
+
+}
+
+.circle button#close{
+  transform-origin: top left;
+  transform: rotate(90deg);
+}
+
+
+.circle-container {
+  position: fixed; 
+  left: -50px;
+  top:-50px;
+}
+
+
+.container.show-nav .circle{
+  transform: rotate(-70deg);
+
+}
+
+nav {
+  left:0;
+  bottom: 10px;
+  position: fixed;
+z-index: 100;
+}
+
+nav  ul {
+  list-style: none;
+  
+}
+.container.show-nav +  nav li {
+  transform: translateX(0) ;
+  transition-delay: .5s;
+}
+
+  nav li{
+    transition: all .3s ease;
+    margin: 30px 0;
+    
+  }
+
+ nav li:nth-child(1){
+  transform: translateX(-100%);
+ }
+
+  nav li:nth-child(2){
+    padding-left: 15px;
+    transform: translateX(-115%);
+  }
+
+  nav li:nth-child(3){
+    padding-left: 30px;
+    transform: translateX(-138%)
+  }
+
+nav a{
+  color: #fafafa;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+nav a:hover {
+  color: #FF7979;
+  font-weight: bold;
+}
+
+
+.content img {
+  max-width: 100%;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.content h1 {
+  margin: 0;
+}
+
+.content small {
+  color: #555;
+  font-style: italic;
+}
+
+.content p {
+  color: #333;
+  line-height: 1.5;
+}
